@@ -1,0 +1,8 @@
+#! /bin/bash
+yum update -y
+yum install python3-pip -y
+pip3 install flask
+yum install git -y
+git clone https://github.com/muslumhanozturk/my-projects.git /home/ec2-user/my-projects
+cd /home/ec2-user/my-projects/python/handson/flask-03-04-If-Handling-Routes-and-Get-Post-Methods/flask-03-handling-routes-and-if-for/flask-03-handling-routes
+python3 app.py
