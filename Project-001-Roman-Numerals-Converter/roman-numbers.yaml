@@ -53,5 +53,5 @@ Resources:
 Outputs:
   WebSiteURL:
     Value: !Sub
-     - http://${PublicAddress}
-     - PublicAddress: !GetAtt WebServerHost.PublicDnsName
+     - http://${PublicAddress}                                  # - http://${PublicIp}
+     - PublicAddress: !GetAtt WebServerHost.PublicDnsName       # - PublicIp: !GetAtt WebServerHost.PublicIp
