@@ -92,8 +92,8 @@ aws ec2 run-instances \
     --image-id $LATEST_AMI \
     --count 1 \
     --instance-type t2.micro \
-    --key-name okt-aws \
-    --security-group-ids sg-xxxxxxxxxxxx \
+    --key-name first-key-pair \
+    --security-group-ids sg-0b8afc59c735ed4db \
     --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=roman_numbers}]' \
     --user-data file:///home/ec2-user/userdata.sh
 ```
