@@ -21,14 +21,14 @@ Resources:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: AES256          #defaulttan geliyor
             BucketKeyEnabled: false         #defaulttan geliyor
-      BucketName: !Ref KittensSubDomainName    # 
-      ObjectLockEnabled: false  #
+      BucketName: !Ref KittensSubDomainName    
+      ObjectLockEnabled: false  
       OwnershipControls:
         Rules:
           - ObjectOwnership: BucketOwnerEnforced  # Disable yapmak için BucketOwnerEnforced Enable yapmak için BucketOwnerPreferred ObjectWriter
-      PublicAccessBlockConfiguration:  #
+      PublicAccessBlockConfiguration:  
         BlockPublicAcls: false
-      VersioningConfiguration:  #
+      VersioningConfiguration:  
         Status: Suspended
       WebsiteConfiguration:
         IndexDocument: index.html
