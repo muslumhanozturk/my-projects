@@ -9,7 +9,7 @@ Parameters:
     Type: AWS::Route53::HostedZone::Id
   KittensSubDomainName:
     Description: Full domain name for the App. ex. kittens.clarusway.us
-    Type: String
+    Type: String   # test.muslumhanozturk.com
     AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)    
   
 Resources:
@@ -21,7 +21,7 @@ Resources:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: AES256          #defaulttan geliyor
             BucketKeyEnabled: false         #defaulttan geliyor
-      BucketName: !Ref KittensSubDomainName    #
+      BucketName: !Ref KittensSubDomainName    # 
       ObjectLockEnabled: false  #
       OwnershipControls:
         Rules:
